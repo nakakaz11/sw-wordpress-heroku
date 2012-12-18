@@ -1,0 +1,150 @@
+body {
+  /*padding: 0 50px 50px 50px;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #e8dfd8;
+    color: #98918a;
+    text-shadow: 1px 1px 0px #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: #00B7FF;
+}
+#wrap {
+    padding: 0 10px 10px 10px;
+}
+/* ------------------------------------------------------------
+  Clearfix
+------------------------------------------------------------ */
+.clf:before,
+.clf:after {
+    content: "";
+    display: table;
+}
+.clf:after {clear: both;}
+.clf {zoom: 1;}
+.clf {overflow: hidden;}
+
+#game{
+}
+#form input#message {
+	border:1px solid #CCCCCC;
+	color: #98918a;
+	font-size:1em;
+	padding:3px 4px;
+	width:60%;
+}
+#form input#delId {
+	border:1px solid #CCCCCC;
+	color: #98918a;
+	font-size:1em;
+	padding:3px 4px;
+	width:5em;
+}
+#chat{
+    clear: both;
+    padding: 5px;
+    width: 100%;
+    background-color: rgba(187, 214, 241, 0.68);
+    border:1px solid #e8e9db;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: auto;
+/*  -moz-opacity:0.7;
+    opacity:0.7; */
+}
+#list {
+    height:350px;
+    overflow: auto;
+}
+#list dt {
+    font-size: 11px;
+}
+#list dd {
+    color: #2b6993;
+    font-size: 19px;
+}
+
+img.player{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+img.bullet{
+	width:10px;
+	height:10px;
+	position:absolute;
+	top:-100px;
+	left:-100px;
+}
+#canvasBase {
+    /*width : 100%;*/
+    float:left;
+}
+#canvasUser {
+    float:right;
+}
+#my-canvas {
+    /*height : 450px;
+    width:   450px;
+    margin: 3em auto;*/
+    border: 3px solid #bbe68a;
+}
+#user-canvas,
+.user-canvas {
+    border: 3px solid #eb98d9;
+}
+
+.out {
+    padding: 0.2em 0.5em;
+    margin: 0.3em;
+    color: #fff;
+    text-shadow: 1px 1px 0px #7d4642;
+    background-color: #ea6375;
+    border: 3px solid #f2d4d6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float:left;
+}
+.outImage {
+    /*background-image:url(../images/out.png);
+   	background-position:top;
+   	background-repeat:repeat-x;*/
+}
+
+/* dragdrop */
+.toolbar {
+  background-color: #eae3db;
+  float:left;
+  }
+.toolbarTx {
+  padding: 0.3em;
+  color: #fff;
+  background-color: #1d9c8f;
+    text-shadow: 1px 1px 0px #31583d;
+}
+.toolbar img {
+    margin: 10px;
+}
+.canvas {
+    /*position:relative;*/
+}
+.canvas img {
+    /*position:absolute;*/
+}
+body > img.tools {
+    position:absolute;
+   	top:0;
+   	left:0;
+}
+.test{
+	position:absolute;
+	top:0;
+	left:0;
+    color: #d11b6d;
+    font-size: 17px;
+}

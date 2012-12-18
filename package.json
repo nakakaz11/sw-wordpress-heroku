@@ -1,0 +1,15 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.8.5",
+    "npm":  "1.1.41"
+  },
+  "dependencies": {
+    "express": "3.0.2",
+    "socket.io": ">=0.9.6",
+    "ejs": "*",
+    "mongoose": "*"
+  }
+}

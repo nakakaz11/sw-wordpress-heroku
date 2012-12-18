@@ -16,6 +16,16 @@
 
 get_header(); ?>
 
+<div class="clf">
+  <div class="toolbar">
+    <div class="toolbarTx">「Drop」して配置。「drag」:移動...「dblclick」:削除...(v5.)</div>
+  </div>
+ </div>
+<div id="game">
+  <img src="/images/unit.png" class="player" id="my-player" />
+  <img src="/images/bullet.png" class="bullet" id="my-bullet" />
+</div>
+
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 		<?php if ( have_posts() ) : ?>

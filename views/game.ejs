@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Shooting game</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="/javascripts/jq.bkstr.min.js"></script>
+    <script src="/javascripts/bkstr.js"></script>
+    <script src="/javascripts/v5.client.js"></script>
+  </head>
+<body>
+<div id="wrap">
+  <div class="clf">
+    <div class="toolbar">
+      <div class="toolbarTx">「Drop」して配置。「drag」:移動...「dblclick」:削除...(v5.)</div>
+    </div>
+   </div>
+   <div id="canvasBase">
+      <div>
+      <span id="mycoord"></span>
+      <span id="coord"></span>
+      </div>
+      <canvas id="my-canvas" width="200" height="200"></canvas>
+    </div>
+    <div id="canvasUser"></div>
+  <div id="game">
+    <img src="/images/unit.png" class="player" id="my-player" />
+    <img src="/images/bullet.png" class="bullet" id="my-bullet" />
+  </div>
+  <div id="chat">
+      <p><%= desc %></p>
+    <form action="" id="form" onSubmit="return false">
+        <input type="text" placeholder="入力して..." id="message" />
+        <button type="button" id="btn">おくる：ひょうじ</button>
+        <input type="text" placeholder="削除ID..." id="delId" />
+        <button type="button" id="btnDbDel">mongoHQ:削除</button>
+    </form>
+    <hr style="background-color:#e8dfd8;border:1px solid #e8dfd8;">
+        <dl id="list"></dl>
+  </div>
+</div>
+</body>
+</html>
