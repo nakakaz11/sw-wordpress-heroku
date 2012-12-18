@@ -10,8 +10,8 @@ app = express()
 # settings -------#
 app.configure ->
   app.set('port', process.env.PORT || 3000)
-  app.set "views", __dirname + "/views"
-  app.set "view engine", "ejs"
+  #app.set "views", __dirname + "/views"
+  #app.set "view engine", "ejs"
   app.use express.logger("dev")
   app.use express.favicon()
   app.use express.bodyParser()
@@ -21,7 +21,7 @@ app.configure ->
 app.configure "development", ->
   app.use express.errorHandler()
 
-app.get "/", routes.index
+#app.get "/", routes.index
 app.get "/game", routes.game
 app.get "/gameover", routes.gameover
 # createServer -------#
