@@ -448,15 +448,3 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20120827', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
-
-/* sw add */
-
-// jQuery追加
-function add_swJs() {
-  wp_enqueue_script('socket.io', '/socket.io/socket.io.js');
-	wp_enqueue_script('easing', 'http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js',array('jquery'));
-	wp_enqueue_script('sw_js', '/javascripts/v5.client.js',array('jquery'));
-}
-add_action( 'init', 'add_swJs' );
-
-
