@@ -610,5 +610,42 @@ function twentyeleven_body_classes( $classes ) {
 
 	return $classes;
 }
+
+/* SW add */
+// jQuery追加
+function add_swJs() {
+	//wp_enqueue_script('easing', get_bloginfo('template_directory') . '/js/jquery.easing.1.3.js',array('jquery'));
+	//wp_enqueue_script('vgrid', get_bloginfo('template_directory') .'/js/jquery.vgrid.min.js',array('jquery'));
+	//wp_enqueue_script('freetile', get_bloginfo('template_directory') .'/js/jquery.freetile.min.js',array('jquery'));
+	wp_enqueue_script('sw_js', get_bloginfo('template_directory') .'/js/sw_ss.js',array('jquery'));
+}
+add_action( 'init', 'add_swJs' );
+
+//http://kachibito.net/wp-code/browser-detection-and-os-detection-with-body-class
+//ブラウザやOSを検出してbody_class()にclass名を与える
+
+function mv_browser_body_class($classes) {
+		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
+		if($is_lynx) $classes[] = 'lynx';
+		elseif($is_gecko) $classes[] = 'gecko';
+		elseif($is_opera) $classes[] = 'opera';
+		elseif($is_NS4) $classes[] = 'ns4';
+		elseif($is_safari) $classes[] = 'safari';
+		elseif($is_chrome) $classes[] = 'chrome';
+		elseif($is_IE) {
+			$classes[] = 'ie';
+			if(preg_match('/MSIE ([0-9]+)([a-zA-Z0-9.]+)/', $_SERVER['HTTP_USER_AGENT'], $browser_version))
+			$classes[] = 'ie'.$browser_version[1];
+		} else $classes[] = 'unknown';
+		if($is_iphone) $classes[] = 'iphone';
+		if ( stristr( $_SERVER['HTTP_USER_AGENT'],"mac") ) {
+			 $classes[] = 'osx';
+		   } elseif ( stristr( $_SERVER['HTTP_USER_AGENT'],"linux") ) {
+  			 $classes[] = 'linux';
+		   } elseif ( stristr( $_SERVER['HTTP_USER_AGENT'],"windows") ) {
+			 $classes[] = 'windows';
+		   }
+		return $classes;
+	}
 add_filter( 'body_class', 'twentyeleven_body_classes' );
 
